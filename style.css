@@ -1,0 +1,490 @@
+/** Import Google Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/** Set global variables **/
+:root{
+    --main-color: #80411e; /* main color used throughout the site */
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%; /* border radius for buttons */
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%; /* border radius for buttons on hover */
+    --border:.2rem solid var(--main-color); /* border style for buttons */
+    --border-hover:.2rem dashed var(--main-color); /* border style for buttons on hover */
+}
+
+/** Reset all elements to default styles **/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+/** Set base font size and other HTML styles **/
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+/** Set padding for all sections **/
+section{
+    padding:2rem 9%;
+}
+
+/** Style for the main heading **/
+.heading{
+    font-size: 9rem;
+    text-transform: uppercase;
+    color:transparent;
+    -webkit-text-stroke: .05rem var(--main-color);
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+}
+
+/** Add a span to the main heading to display subtext **/
+.heading span{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color:var(--main-color);
+    font-size: 3rem;
+}
+
+/** Style for all buttons **/
+.btn{
+    display: inline-block;
+    padding:.9rem 1.5rem;
+    border-radius: var(--border-radius);
+    color:var(--main-color);
+    background: none;
+    border:var(--border);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+/** Style for buttons on hover **/
+.btn:hover{
+    border-radius: var(--border-radius-hover);
+    border:var(--border-hover);
+    background-color: #e4bc84;
+}
+
+/** Style for the header **/
+.header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background:#fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding:2rem 9%;
+}
+
+/** Style for the logo in the header **/
+.header .logo{
+    color:var(--main-color);
+    font-size: 2.3rem;
+}
+
+/** Style for the icon in the logo in the header **/
+.header .logo i{
+    padding-left: .5rem;
+    
+}
+
+/** Style for links in the navbar **/
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color: #80411e;
+}
+
+/* This styles the navbar link when hovered over */
+.navbar a:hover{
+    border-bottom: 2px solid #80411e;
+}
+
+/* This styles the header button */
+.header .btn{
+    margin-top: 0;
+}
+
+/* This styles the menu button */
+#menu-btn{
+    font-size: 3rem;
+    color: #80411e;
+    cursor: pointer;
+    display: none;
+}
+
+/* This styles the home section */
+.home{
+    min-height: 100vh;
+    padding-top: 12rem;
+    background: url(./image/home-bg1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.home .row .content{
+    flex:1 1 42rem;
+}
+
+.home .row .image{
+    flex:1 1 42rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.home .row .image img{
+    height:40rem;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-7rem);
+    }
+}
+
+.home .row .content h3{
+    font-size: 6.5rem;
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+/* This styles the image slider in the home section */
+.home .image-slider{
+    text-align: center;
+    padding:3rem 0;
+}
+
+.home .image-slider img{
+    height:9rem;
+    margin:0 .5rem;
+    cursor: pointer;
+    margin-top: 5rem;
+}
+
+.home .image-slider img:hover{
+    transform: translateY(-2rem);
+}
+
+/* This styles the about section */
+.about{
+    padding-top: 12rem;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+
+/* Styling for the about section */
+.about .row .image{
+    flex:1 1 42rem;
+}
+
+/* Styling for the image within the about section */
+.about .row .image img{
+    width: 100%;
+    animation:aboutImage 4s linear infinite;
+}
+
+/* Animation keyframes for the about image */
+@keyframes aboutImage {
+    0%, 100%{
+        /* Starting and ending state of the image animation */
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+    50%{
+        /* Intermediate state of the image animation */
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
+}
+
+/* Styling for the content within the about section */
+.about .row .content{
+    flex:1 1 42rem;
+}
+
+/* Styling for the title within the content of the about section */
+.about .row .content .title{
+    color:var(--main-color);
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+/* Styling for the paragraphs within the content of the about section */
+.about .row .content p{
+    color:var(--main-color);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding:1rem 0;
+}
+
+/* Styling for the container that holds the icons within the content of the about section */
+.about .row .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    padding-top: 3rem;
+}
+
+/* Styling for the individual icon boxes within the icon container of the about section */
+.about .row .content .icons-container .icons{
+    flex:1 1 15rem;
+    padding:1.5rem;
+    text-align: center;
+    border:var(--border);
+    border-radius: var(--border-radius);
+}
+
+/* Styling for the icon images within the icon container of the about section */
+.about .row .content .icons-container .icons img{
+    height: 5rem;
+}
+
+/* Styling for the icon titles within the icon container of the about section */
+.about .row .content .icons-container .icons h3{
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color:var(--main-color);
+}
+
+/* Styling for the gallery section */
+.gallery{
+    padding-top: 12rem;
+}
+
+/* Styling for the container that holds the gallery boxes */
+.gallery .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax 30rem, 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Styling for individual gallery boxes */
+  .gallery .box-container .box {
+    overflow: hidden;
+    position: relative;
+    height: 25rem;
+  }
+  
+  /* Styling for hovered gallery boxes */
+  .gallery .box-container .box:hover {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid #80411e;
+  }
+/* This is a CSS code for creating a gallery of images with a hover effect */
+.gallery{
+    padding-top: 12rem;
+}
+
+/* Creates a grid container for the gallery */
+.gallery .box-container {
+    display: -ms-grid;
+    display: grid;
+    /* Creates grid columns with a minimum width of 30rem and a maximum width of 1fr, auto-fitting as necessary */
+    -ms-grid-columns: minmax 30rem, 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Defines the box element of the gallery */
+  .gallery .box-container .box {
+    overflow: hidden;
+    position: relative;
+    height: 25rem;
+  }
+  
+  /* Hover effect for the image in the box */
+  .gallery .box-container .box:hover img {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  
+  /* Hover effect for the content in the box */
+  .gallery .box-container .box:hover .content {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  
+  /* Styling for the image in the box */
+  .gallery .box-container .box img {
+    height: 100%;
+    width: 100%;
+    /* Makes sure the image covers the entire box */
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  /* Styling for the content in the box */
+  .gallery .box-container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Background color for the content */
+    background: #e4bc84;
+    text-align: center;
+    padding: 3rem 2rem;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    padding-top: 4rem;
+  }
+  
+  /* Styling for the heading in the content */
+  .gallery .box-container .box .content h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #80411e;
+  }
+  
+  /* Styling for the paragraph in the content */
+  .gallery .box-container .box .content p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #80411e;
+    margin-bottom: 0;
+  }
+
+/* This is a CSS code for creating a footer with a box layout */
+.footer{
+    /* Background image for the footer */
+    background:url(./image/home-bg1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Creates a grid container for the boxes in the footer */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap:1.5rem;
+}
+
+/* Styling for the heading in the footer box */
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+/* Styling for the links in the footer box */
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+
+.footer .credit span{
+    border-bottom: var(--border-hover); /* adds a border to the bottom of the <span> element */
+}
+
+
+
+/* media queries */
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%; /* sets the base font size to 55% of the default size for screens  */
+    }
+
+    .header{
+        padding:2rem; /* adds padding to the .header class for screens  */
+    }
+
+    section{
+        padding:2rem; /* adds padding to all <section> elements for screens  */
+    }
+
+}
+
+@media(max-width:768px){
+
+    .heading{
+        font-size: 6rem; /* increases the font size of the .heading class*/
+    }
+
+    .heading span{
+        font-size: 2.3rem; /* increases the font size of the <span> element inside the .heading class */
+    }
+
+    #menu-btn{
+        display: initial; /* sets the display property of the element with the ID #menu-btn to "initial" */
+    }
+
+    #menu-btn.fa-times{
+        transform:rotate(180deg); /* rotates the element with the ID #menu-btn and the class .fa-times. */
+    }
+
+    .header .navbar{
+        position: absolute; /* sets the position property of the element with the class .navbar  */
+        top:99%; left:0; right:0; /* sets the top, left, and right properties of the element with the class .navbar  */
+        background:#fff; /* sets the background color of the element with the class .navbar  */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* clips the element with the class .navbar  */
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* clips the element  */
+    }
+
+    .header .navbar a{
+        display: block; /* sets the display property of the <a> elements inside the element  */
+        font-size: 2.2rem; /* sets the font size of the <a> elements inside the element  */
+        margin:0; /* sets the margin of the <a> elements  */
+        padding:1.5rem 2rem; /* sets the padding of the <a> elements inside the element*/
+    }
+}
+
+@media(max-width:450px){
+
+    /* Reduce font size of html element for smaller screens */
+html{
+    font-size: 50%;
+}
+
+/* Adjust image size for smaller screens */
+.home .row .image img{
+    height: auto;
+    width: 100%;
+}
+
+
+}
