@@ -1,3 +1,285 @@
+/** Import Google Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/** Set global variables **/
+:root{
+    --main-color: #80411e; /* main color used throughout the site */
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%; /* border radius for buttons */
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%; /* border radius for buttons on hover */
+    --border:.2rem solid var(--main-color); /* border style for buttons */
+    --border-hover:.2rem dashed var(--main-color); /* border style for buttons on hover */
+}
+
+/** Reset all elements to default styles **/
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+/** Set base font size and other HTML styles **/
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+/** Set padding for all sections **/
+section{
+    padding:2rem 9%;
+}
+
+/** Style for the main heading **/
+.heading{
+    font-size: 9rem;
+    text-transform: uppercase;
+    color:transparent;
+    -webkit-text-stroke: .05rem var(--main-color);
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+}
+
+/** Style for the main heading **/
+.heading-description {
+    text-align: center;
+    padding: 1.3rem 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #80411e;
+}
+
+/** Add a span to the main heading to display subtext **/
+.heading span{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color:var(--main-color);
+    font-size: 3rem;
+}
+
+/** Style for all buttons **/
+.btn{
+    display: inline-block;
+    padding:.9rem 1.5rem;
+    border-radius: var(--border-radius);
+    color:var(--main-color);
+    background: none;
+    border:var(--border);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+/** Style for buttons on hover **/
+.btn:hover{
+    border-radius: var(--border-radius-hover);
+    border:var(--border-hover);
+    background-color: #e4bc84;
+}
+
+/** Style for login-button on hover **/
+.header #login-btn{
+    font-size: 2.8rem;
+    color: var(--main-color);
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+/** Style for login-button on hover **/
+.header  #login-btn:hover{
+    color: #e4bc84;
+}
+
+
+/*--------------------------------------LOGIN FORM STYLING----------------------------------------------*/
+
+
+/** Style for login-form container **/
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.9);
+    position: fixed;
+    top: 0;
+    right:-105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+.login-form-container.active{
+    right: 0;
+}
+.login-form-container form{
+    background: #e4bc84;
+    border: var(--border);
+    width: 40rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem;
+}
+
+/** Style for login-form heading **/
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+/** Style for login-form label **/
+.login-form-container form label{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    color: var(--main-color);;
+}
+
+/** Style for login-form input **/
+.login-form-container form .input-box{
+    width: 100%;
+    margin: 0.7rem 0;
+    font-size: 1.6rem;
+    border: 2px solid var(--main-color);;
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    text-transform: none;
+}
+
+/** Style for login-form checkbox **/
+.login-form-container form .check-box{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem 0;
+}
+
+/** Style for login-form label **/
+.login-form-container form .check-box label{
+    font-size: 1.5rem;
+    color: var(--main-color);;
+    cursor: pointer;
+    margin-top: -2%;
+}
+
+/** Style for login-form buttons **/
+.login-form-container form .fbtn{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.fbtn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    background: var(--main-color);;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    
+}
+/** Style for login-form button hover **/
+.fbtn:hover{
+    background-color: #e4bc84;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+/** Style for login-form paragraph **/
+.login-form-container form p{
+    padding-top: 0.8rem;
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+
+/** Style for login-form anchor**/
+.login-form-container form p a{
+    text-decoration: underline;
+    color: #e4bc84;
+}
+
+/** Style for login-form close button **/
+.login-form-container #close-login-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+/** Style for login-form close button hover **/
+.login-form-container #close-login-btn:hover{
+    color: #e4bc84;
+}
+
+
+/*-----------------------------------------HEADER STYLING-----------------------------------------------*/
+
+
+
+/** Style for the header **/
+.header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background:#fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding:2rem 9%;
+}
+
+/** Style for the logo in the header **/
+.header .logo{
+    color:var(--main-color);
+    font-size: 2.3rem;
+}
+
+/** Style for the icon in the logo in the header **/
+.header .logo i{
+    padding-left: .5rem;
+    
+}
+
+/** Style for links in the navbar **/
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+/* This styles the navbar link when hovered over */
+.navbar a:hover{
+    border-bottom: 2px solid var(--main-color);
+}
+
+/* This styles the header button */
+.header .btn{
+    margin-top: 0;
+}
+
+/* This styles the menu button */
+#menu-btn{
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+
 /*---------------------------------MAIN HOME SECTION STYLING-----------------------------------------*/
 
 
@@ -61,4 +343,54 @@
 }
 .home .small-image img:hover{
     transform: translateY(-2rem);
+}
+
+
+
+/*---------------------------------FOOTER STYLING----------------------------------------------*/
+
+
+/* This is a CSS code for creating a footer with a box layout */
+.footer{
+    /* Background image for the footer */
+    background:url(./image/bg1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Creates a grid container for the boxes in the footer */
+.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap:1.5rem;
+}
+
+/* Styling for the heading in the footer box */
+.footer .footer-container .footer-box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+/* Styling for the links in the footer box */
+.footer .footer-container .footer-box a{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+/* Styling for the links in the footer credit */
+.footer .footer-credit{
+    text-align: center;
+    font-size: 2rem;
+    padding:2rem 1rem;
+    margin-top: 1rem;
+    color:var(--main-color);
+}
+
+/* Styling for the links in the footer credit span */
+.footer .footer-credit span{
+    border-bottom: var(--border-hover); /* adds a border to the bottom of the <span> element */
 }
