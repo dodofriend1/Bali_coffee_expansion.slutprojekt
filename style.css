@@ -225,6 +225,8 @@ section{
 }
 
 
+
+
 /*-----------------------------------------HEADER STYLING-----------------------------------------------*/
 
 
@@ -346,51 +348,319 @@ section{
 }
 
 
+/*----------------------------- HISTORY SECTION STYLING-----------------------------------------*/
 
-/*---------------------------------FOOTER STYLING----------------------------------------------*/
 
-
-/* This is a CSS code for creating a footer with a box layout */
-.footer{
-    /* Background image for the footer */
-    background:url(./image/bg1.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
+/* This styles the history section */
+.history .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2rem;
+    padding: 2.5rem 0;
+    grid-row-gap: 4rem;
+    
 }
 
-/* Creates a grid container for the boxes in the footer */
-.footer .footer-container{
+/* This styles the history section boxes */
+.history .container .history-box {
+    background: var(--white);
+    height: auto;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(179, 179, 179, 0.2);
+    padding-bottom: 3rem;
+    border-radius: 10px;
+}
+
+/* This styles the history section boxes images */
+.history .container .history-box img {
+    width: 100%;
+    height: 65%;
+    border-radius: 10px;
+}
+
+/* This styles the history section boxes content */
+.history .container .history-box .history-content {
+    padding: 1.5rem;
+}
+
+/* This styles the history section boxes content heading */
+.history .container .history-box .history-content h3 {
+    font-size: 2.5rem;
+    padding: 1.3rem 0;
+}
+
+/* This styles the history section content paragraph */
+.history .container .history-box .history-content p {
+    font-size: 1.6rem;
+    padding: 1.3rem 0;
+    font-weight: 400;
+    color: var(--black);
+}
+
+/* This styles the history section boxes hover */
+.history .container .history-box:hover {
+    transform: translateY(-1rem);
+}
+
+
+
+/*---------------------------------GALLERY PAGE STYLING-----------------------------------------*/
+
+
+/* Styling for the gallery section */
+.gallery{
+    padding-top: 12rem;
+}
+
+/* Styling for the container that holds the gallery boxes */
+.gallery .gallery-container {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    -ms-grid-columns: minmax 30rem, 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Styling for individual gallery boxes */
+  .gallery .gallery-container .gallery-box {
+    overflow: hidden;
+    position: relative;
+    height: 25rem;
+  }
+  
+  /* Styling for hovered gallery boxes */
+  .gallery .gallery-container .gallery-box:hover {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid var(--main-color);
+  }
+/* This is a CSS code for creating a gallery of images with a hover effect */
+.gallery{
+    padding-top: 12rem;
+}
+
+/* Creates a grid container for the gallery */
+.gallery .gallery-container {
+    display: -ms-grid;
+    display: grid;
+    /* Creates grid columns with a minimum width of 30rem and a maximum width of 1fr, auto-fitting as necessary */
+    -ms-grid-columns: minmax 30rem, 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Defines the box element of the gallery */
+  .gallery .gallery-container .gallery-box {
+    overflow: hidden;
+    position: relative;
+    height: 25rem;
+  }
+  
+  /* Hover effect for the image in the box */
+  .gallery .gallery-container .gallery-box:hover img {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  
+  /* Hover effect for the content in the box */
+  .gallery .gallery-container .gallery-box:hover .content {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  
+  /* Styling for the image in the box */
+  .gallery .gallery-container .gallery-box img {
+    height: 100%;
+    width: 100%;
+    /* Makes sure the image covers the entire box */
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  /* Styling for the content in the box */
+  .gallery .gallery-container .gallery-box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Background color for the content */
+    background: #e4bc84;
+    text-align: center;
+    padding: 3rem 2rem;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    padding-top: 4rem;
+  }
+  
+  /* Styling for the heading in the content */
+  .gallery .gallery-container .gallery-box .content h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--main-color);
+  }
+
+  /* Styling for the heading in the content */
+  .gallery .gallery-container .gallery-box .content span{
+    font-size: 2rem;
+    color:var(--main-color);
+    line-height: 1.8;
+}
+  
+  /* Styling for the paragraph in the content */
+  .gallery .gallery-container .gallery-box .content p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: var(--main-color);
+    margin-bottom: 0;
+  }
+
+/*----------------------------GALLERY PAGE MENU SECTION STYLING-----------------------------------------*/
+
+/* Styling for menu section */
+  .menu .menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+    justify-content: center;
+}
+
+/* Styling for menu section boxes */
+.menu .menu-container .menu-box{
+    flex:1 1 42rem;
+    padding:2rem;
+    border:var(--border);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+    margin-left: 6rem;
+}
+
+/* Styling for menu section boxes hover */
+.menu .menu-container .menu-box:hover{
+    border:var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
+
+/* Styling for menu section boxes images */
+.menu .menu-container .menu-box img{
+    height: 8rem;
+    margin-left: -6rem;
+}
+
+/* Styling for menu section boxes content heading */
+.menu .menu-container .menu-box .content h3{
+    font-size: 2.2rem;
+    color:var(--main-color);
+    line-height: 1.8;
+}
+
+/* Styling for menu section boxes content paragraph */
+.menu .menu-container .menu-box .content p{
+    font-size: 1.6rem;
+    color:var(--main-color);
+    line-height: 1.8;
+    padding:1rem 0;
+}
+
+/* Styling for menu section boxes span */
+.menu .menu-container .menu-box .content span{
+    font-size: 2rem;
+    color:var(--main-color);
+    line-height: 1.8;
+}
+
+
+/*---------------------------------ABOUT US PAGE STYLING-----------------------------------------*/
+
+
+/* This styles the about section */
+.about{
+    padding-top: 12rem;
+}
+
+/* This styles the about section */
+.about .about-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap:1.5rem;
 }
 
-/* Styling for the heading in the footer box */
-.footer .footer-container .footer-box h3{
-    font-size: 2.5rem;
-    padding:1rem 0;
-    color:var(--main-color);
+/* Styling for the about section */
+.about .about-box .image{
+    flex:1 1 42rem;
 }
 
-/* Styling for the links in the footer box */
-.footer .footer-container .footer-box a{
-    display: block;
+/* Styling for the image within the about section */
+.about .about-box .image img{
+    width: 100%;
+    animation:aboutImage 4s linear infinite;
+}
+
+/* Animation keyframes for the about image */
+@keyframes aboutImage {
+    0%, 100%{
+        /* Starting and ending state of the image animation */
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+    50%{
+        /* Intermediate state of the image animation */
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
+}
+
+/* Styling for the content within the about section */
+.about .about-box .content{
+    flex:1 1 42rem;
+}
+
+/* Styling for the title within the content of the about section */
+.about .about-box .content .title{
+    color:var(--main-color);
+    font-size: 3rem;
+    line-height: 1.8;
+}
+
+/* Styling for the paragraphs within the content of the about section */
+.about .about-box .content p{
+    color:var(--main-color);
     font-size: 1.5rem;
-    font-weight: bold;
+    line-height: 1.8;
     padding:1rem 0;
-    color:var(--main-color);
 }
 
-/* Styling for the links in the footer credit */
-.footer .footer-credit{
+/* Styling for the container that holds the icons within the content of the about section */
+.about .about-box .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    padding-top: 3rem;
+}
+
+/* Styling for the individual icon boxes within the icon container of the about section */
+.about .about-box .content .icons-container .icons{
+    flex:1 1 15rem;
+    padding:1.5rem;
     text-align: center;
-    font-size: 2rem;
-    padding:2rem 1rem;
-    margin-top: 1rem;
-    color:var(--main-color);
+    border:var(--border);
+    border-radius: var(--border-radius);
 }
 
-/* Styling for the links in the footer credit span */
-.footer .footer-credit span{
-    border-bottom: var(--border-hover); /* adds a border to the bottom of the <span> element */
+/* Styling for the icon images within the icon container of the about section */
+.about .about-box .content .icons-container .icons img{
+    height: 5rem;
+}
+
+/* Styling for the icon titles within the icon container of the about section */
+.about .about-box .content .icons-container .icons h3{
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color:var(--main-color);
 }
