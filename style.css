@@ -664,3 +664,385 @@ section{
     padding-top: 1rem;
     color:var(--main-color);
 }
+
+
+/*---------------------------------TEAMS SECTION STYLING-----------------------------------------*/
+
+/* This styles the team conatiner */
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    padding: 2.5rem 0;
+}
+
+/* This styles the team box */
+.team .container .team-box {
+    width: auto;
+    cursor: pointer;
+}
+
+/* This styles the team box images */
+.team .container .team-box .team-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: all linear 0.5s;
+}
+.team .container .team-box .team-img img {
+    width: 100%;
+}
+.team .container .team-box .team-img:hover img {
+    transform: scale(1.1);
+}
+
+/* This styles the team box image hover */ 
+.team .container .team-box .team-img:hover {
+    box-shadow: 0px 0px 10px 0px var(--main-color);
+}/
+
+/* This styles the team box content */ 
+.team .container .team-box .team-content {
+    box-shadow: 3px 3px 10px #e4bc84(179, 179, 179, 0.2);
+    text-align: center;
+    width: 80%;
+    position: relative;
+    top: -10%;
+    z-index: 2;
+    background: #e4bc84;
+    left: 10%;
+    border-radius: 0.8rem;
+}
+.team .container .team-box .team-content h3 {
+    font-size: 2rem;
+    color: black;
+    padding: 1.2rem 0;
+
+}
+.team .container .team-box .team-content p {
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+}
+.team .container .team-box .team-content .social a {
+    display: inline-block;
+    margin: 0.7rem;
+    width: 4rem;
+    height: 4rem;
+    background: var(--main-color);
+    color: white;
+    line-height: 4rem;
+    font-size: 1.5rem;
+}
+.team .container .team-box .team-content .social a:hover {
+    border-radius: 100%;
+}
+.team .container .team-box:hover .team-content {
+    transform: translateY(-1rem);
+}
+
+
+
+/*---------------------------------REVIEWS PAGE STYLING-----------------------------------------*/
+
+
+/* Styling for the review */
+.review{
+    padding-top: 12rem;
+}
+
+/* Styling for the review section */
+.review .review-container{
+    padding:7rem 0;
+    width: 80%;
+    margin-left: 10%;
+}
+
+/* Styling for the gallery section boxes */
+.review .review-container .review-box{
+    border:var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    padding:2rem;
+}
+
+/* Styling for the gallery section boxes hover */
+.review .review-container .review-box:hover{
+    border:var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
+
+/* Styling for the gallery section boxes left qoute icons*/
+.review .review-container .review-box .fa-quote-left{
+    position: absolute;
+    top:2rem; left: 2.5rem;
+    font-size: 6rem;
+    color:var(--main-color);
+    z-index: -1;
+}
+
+/* Styling for the gallery section boxes right qoute icons*/
+.review .review-container .review-box .fa-quote-right{
+    position: absolute;
+    bottom:2rem; right: 2.5rem;
+    font-size: 6rem;
+    color:var(--main-color);
+    z-index: -1;
+}
+
+/* Styling for the gallery section boxes images*/
+.review .review-container .review-box img{
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+    margin-bottom: .7rem;
+}
+
+/* Styling for the gallery section boxes stars div*/
+.review .review-container .review-box .stars{
+    padding:.5rem 0;
+}
+
+/* Styling for the gallery section boxes stars icons*/
+.review .review-container .review-box .stars i{
+    font-size: 1.7rem;
+    color:var(--main-color);
+}
+
+/* Styling for the gallery section boxes paragraph*/
+.review .review-container .review-box p{
+    font-size: 1.6rem;
+    color:var(--main-color);
+    padding:1rem 0;
+    line-height: 1.8;
+}
+
+/* Styling for the gallery section boxes heading*/
+.review .review-container .review-box h3{
+    font-size: 2.2rem;
+    color:var(--main-color);
+    line-height: 1.8;
+}
+
+/* Styling for the gallery section boxes span*/
+.review .review-container .review-box span{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+
+
+/*---------------------------------STORES PAGE STYLING-----------------------------------------*/
+
+
+/* Styling for the store */
+.stores{
+    padding-top: 12rem;
+}
+
+/* Styling for the store section */
+.stores .store-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 2rem;
+    padding: 2.5rem 0;
+}
+
+/* Styling for the store section boxes */
+.stores .store-container .store-box {
+    border: 0.2rem solid var(--bg);
+    border-radius: 10px;
+    height: auto;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px grey;
+    transition: 0.4s linear all;
+}
+
+/* Styling for the store section boxes hover */
+.stores .store-container .store-box:hover {
+    transform: translate(0px, -5px);
+}
+
+/* Styling for the store section boxes images div */
+.stores .store-container .store-box .stores-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* Styling for the store section boxes images */
+.stores .store-container .store-box .stores-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styling for the store section boxes content */
+.stores .store-container .store-box .stores-content {
+    padding: 2rem;
+}
+
+/* Styling for the store section content heading h3 */
+.stores .store-container .store-box .stores-content h3 {
+    font-size: 1.6rem;
+    padding: 1.3rem 0;
+    letter-spacing: 0.1rem;
+}
+
+/* Styling for the store section boxes content span */
+.stores .store-container .store-box .stores-content h3 span {
+    color: var(--bg);
+}
+
+/* Styling for the store section boxes content heading h1 */
+.stores .store-container .store-box .stores-content h1 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: 2rem;
+}
+
+/* Styling for the store section boxes content paragragh */
+.stores .store-container .store-box .stores-content p {
+    font-size: 1.4rem;
+    color: var(--para-font);
+}
+
+/* Styling for the store section boxes content images hover */
+.stores .store-container .store-box:hover img {
+    transform: scale(1.1);
+}
+
+
+/*---------------------------------FOOTER STYLING----------------------------------------------*/
+
+
+/* This is a CSS code for creating a footer with a box layout */
+.footer{
+    /* Background image for the footer */
+    background:url(./image/bg1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Creates a grid container for the boxes in the footer */
+.footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap:1.5rem;
+}
+
+/* Styling for the heading in the footer box */
+.footer .footer-container .footer-box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+/* Styling for the links in the footer box */
+.footer .footer-container .footer-box a{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+/* Styling for the links in the footer credit */
+.footer .footer-credit{
+    text-align: center;
+    font-size: 2rem;
+    padding:2rem 1rem;
+    margin-top: 1rem;
+    color:var(--main-color);
+}
+
+/* Styling for the links in the footer credit span */
+.footer .footer-credit span{
+    border-bottom: var(--border-hover); /* adds a border to the bottom of the <span> element */
+}
+
+
+
+/*----------------------------MEDIA QUERIES FOR RESPONSIVE----------------------------------------------*/
+
+
+
+/* media queries for max-width 991px */
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%; /* sets the base font size to 55% of the default size for screens  */
+    }
+
+    .header{
+        padding:2rem; /* adds padding to the .header class for screens  */
+    }
+
+    section{
+        padding:2rem; /* adds padding to all <section> elements for screens  */
+    }
+
+}
+
+/* media queries for max-width  768px */
+
+@media(max-width:768px){
+
+    .heading{
+        font-size: 6rem; /* increases the font size of the .heading class*/
+    }
+
+    .heading span{
+        font-size: 2.3rem; /* increases the font size of the <span> element inside the .heading class */
+    }
+    .heading-description{ 
+        padding: 1.3rem 0;  /* padding of the .heading-description class*/
+    }
+    #menu-btn{
+        display: initial; /* sets the display property of the element with the ID #menu-btn to "initial" */
+    }
+
+    #menu-btn.fa-times{
+        transform:rotate(180deg); /* rotates the element with the ID #menu-btn and the class .fa-times. */
+    }
+
+    .header .navbar{
+        position: absolute; /* sets the position property of the element with the class .navbar  */
+        top:99%; left:0; right:0; /* sets the top, left, and right properties of the element with the class .navbar  */
+        background:#fff; /* sets the background color of the element with the class .navbar  */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* clips the element with the class .navbar  */
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* clips the element  */
+    }
+
+    .header .navbar a{
+        display: block; /* sets the display property of the <a> elements inside the element  */
+        font-size: 2.2rem; /* sets the font size of the <a> elements inside the element  */
+        margin:0; /* sets the margin of the <a> elements  */
+        padding:1.5rem 2rem; /* sets the padding of the <a> elements inside the element*/
+    }
+}
+
+/* media queries for max-width 450px */
+
+@media(max-width:450px){
+
+    /* Reduce font size of html element for smaller screens */
+html{
+    font-size: 50%;
+}
+
+/* Adjust image size for smaller screens */
+.home .about-box .image img{
+    height: auto;
+    width: 100%;
+}
+.heading-description{
+    padding: 1.3rem 0; /* padding of the .heading-description class*/
+}
+}
