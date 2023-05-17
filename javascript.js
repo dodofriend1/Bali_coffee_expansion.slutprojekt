@@ -1,4 +1,4 @@
-/*----- login form -------- */
+/*login form  */
 
 // Get the element with the class ".login-form-container" and save it to a variable
 var loginForm = document.querySelector('.login-form-container');
@@ -18,7 +18,7 @@ document.querySelector('#close-login-btn').onclick = () =>{
 
 
 
-/*----- Responsive menu button -------- */
+/*Responsive menu button  */
 
 // Get the element with the ID "menu-btn" and save it to a variable
 let menu = document.querySelector('#menu-btn');
